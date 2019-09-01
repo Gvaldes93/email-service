@@ -71,5 +71,9 @@ curl -X POST \
 response for this request: 200 OK - `Email sent successfully with quote of day` 
 
 TODO:
+- API documentation with Swagger
+- API discoverability (HATEOAS impl) and more specific error handling (custom status codes and messages)
+- API authentication
 - Logging library and better logging in general
+- CI / CD pipeline
 - 
