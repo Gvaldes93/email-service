@@ -114,7 +114,8 @@ public class DefaultEmailServiceTest {
         ArgumentCaptor<Request> argument = ArgumentCaptor.forClass(Request.class);
         verify(sendGrid).api(argument.capture());
 
-        assertTrue(argument.getValue().getBody().contains("<body> <p>This is a test email</p> There's no angry way to say bubbles </body>"));
+        assertTrue(argument.getValue().getBody().contains("<body> <p>This is a test email</p> " +
+                "<p>There's no angry way to say bubbles</p></body>"));
     }
 
     @Test

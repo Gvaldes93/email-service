@@ -71,7 +71,7 @@ public class DefaultEmailService implements EmailService {
         if (enrich) {
             String qod = quoteOfDayService.getQuoteOfTheDay();
             if (body.contains("</body>")) {
-                body = body.replace("</body>", qod + " </body>");
+                body = body.replace("</body>", "<p>" + qod + "</p></body>");
             } else {
                 body += "\n" + qod;
             }
