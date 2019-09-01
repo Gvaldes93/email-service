@@ -72,8 +72,8 @@ response for this request: 200 OK - `Email sent successfully with quote of day`
 
 TODO:
 - API documentation with Swagger
-- Quote of the day request cached daily and serve from memory
-- API discoverability (HATEOAS impl) and more specific error handling (custom status codes and messages)
+- Quote of the day request cached daily and served from memory
+- API discoverability (HATEOAS impl) and more specific error handling custom status codes and messages body in html validation and replying with detailed errors encountered
 - Logging library and better logging in general
 - CI / CD pipeline
 
