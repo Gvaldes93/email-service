@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.IOException;
 
@@ -57,11 +58,11 @@ public class DefaultEmailService implements EmailService {
     }
 
     private void appendBody(EmailRequest emailRequest, Mail mail, boolean enrich) throws IOException {
-        if (emailRequest.getBody() == null) {
+        if (emailRequest.getBody() == null && !enrich) {
             return;
         }
 
-        String body = emailRequest.getBody();
+        String body = emailRequest.getBody() != null ? emailRequest.getBody() : "";
         String contentType = "text/plain";
 
         if (HtmlValidator.isHtml(body)) {
