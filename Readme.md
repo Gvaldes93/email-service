@@ -6,14 +6,14 @@ API that allows sending emails in SpringBoot and Java 8.
 ### Build and run with gradle
 `./gradlew build`
 
-Export environment variable `SENDGRID_API_KEY={InsertYourApiKEy}` 
+Export environment variable `EMAIL_SERVICE_PROVIDER_API_KEY={InsertYourApiKEy}` 
 and run `java -jar build/libs/email.microservice-1.0.0.jar`
 application can be find at `localhost:8080`
  
 ### or Build and run with docker
 `docker build . -t emailservice/emailservice`
 then 
-`docker run -p 8080:8080 -e SENDGRID_API_KEY={InsertYourApiKEy} emailservice/emailservice`
+`docker run -p 8080:8080 -e EMAIL_SERVICE_PROVIDER_API_KEY={InsertYourApiKEy} emailservice/emailservice`
 
 ## API 
 endpoint: __/email__ 
